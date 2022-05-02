@@ -8,7 +8,6 @@ namespace UnityEditor.Threads.GitPlugin
         private static string _title = "GetAllActiveBranches";
         private static string[] _outputs;
 
-        [MenuItem("Assets/Git/GetAllActiveBranches")]
         public static void Init()
         {
             _outputs = GITMethods.GetAllActiveBranches();

@@ -8,7 +8,7 @@ namespace UnityEditor.Threads.GitPlugin
         private static string _title = "GetAllRemoteBranches";
         private static string[] _outputs;
 
-        [MenuItem("Assets/Git/GetAllRemoteBranches")]
+        [MenuItem("Git/GetAllRemoteBranches")]
         public static void Init()
         {
             _outputs = GITMethods.GetAllRemoteBranches();

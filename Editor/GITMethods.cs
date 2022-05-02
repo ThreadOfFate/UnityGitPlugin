@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 namespace UnityEditor.Threads.GitPlugin
@@ -100,13 +101,29 @@ namespace UnityEditor.Threads.GitPlugin
 
                 output = output.Replace("\n", Environment.NewLine);
 
-                string[] files = output.Split(
+                var files = output.Split(
                     new string[] {Environment.NewLine},
                     StringSplitOptions.None
-                );
-                allFiles.AddRange(files);
+                ).ToList();
+                for(int i =0; i < files.Count;i++)
+                {
+                    if (files[i].EndsWith(".meta"))
+                    {
+                        continue;
+                    }
+                    int start =  files[i].LastIndexOf('/') + 1;
+                    if (start < 0)
+                    {
+                        start = 0;
+                    }
+                    int count = files[i].LastIndexOf('.') - start;
+                    if (count < 0)
+                    {
+                        count = files[i].Length - start;
+                    }
+                    allFiles.Add(files[i].Substring(start, count));
+                }
             }
-
             return allFiles.Distinct().ToArray();
         }
 

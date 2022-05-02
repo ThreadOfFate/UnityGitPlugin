@@ -8,7 +8,7 @@ namespace UnityEditor.Threads.GitPlugin
         private static string _title = "GetAllFilesChanges";
         private static string[] _outputs;
 
-        [MenuItem("Assets/Git/GetAllFilesChanges")]
+        [MenuItem("Git/GetAllFilesChanges")]
         public static void Init()
         {
             _outputs = GITMethods.GetAllFilesChanges();
