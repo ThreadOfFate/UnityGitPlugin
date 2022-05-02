@@ -1,0 +1,13 @@
+{
+  "name": "com.threads.gitplugin",
+  "version": "0.0.1",
+  "displayName": "GIT Plugin",
+  "description": "This is a GIT Plugin",
+  "unity": "2020.3",
+  "unityRelease": "31f1",
+  "licensesUrl": "https://github.com/ThreadOfFate/Unity-GIT-Plugin/blob/main/LICENSE",
+  "author": {
+    "name": "ThreadsOfFate",
+    "url": "https://github.com/ThreadOfFate/"
+  }
+}
