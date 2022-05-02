@@ -10,7 +10,7 @@ namespace UnityEditor.Threads.GitPlugin
     public static class GITMethods
     {
         private static GitSettings _settings =>
-            (GitSettings) AssetDatabase.LoadAssetAtPath("Packages/GIT Plugin/GitSettings.asset", typeof(GitSettings));
+            (GitSettings) AssetDatabase.LoadAssetAtPath("Packages/com.threads.gitplugin/GitSettings.asset", typeof(GitSettings));
 
         private static string _path = "";
 
